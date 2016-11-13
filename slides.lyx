@@ -527,9 +527,76 @@ C++ Example
 
 \begin_deeper
 \begin_layout Itemize
-Struct example
+In C, you would use structs, cf.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Struct example"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/oop1-2.cpp#L6"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Notice the Walk function requires a pointer to a struct.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In C++, we'll use an object:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "OOP example"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/oop1-3.cpp#L6"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Any issues here?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "OOP example"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/oop1-1.cpp#L6"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+How about here?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Subsection
 Transition from C to C++

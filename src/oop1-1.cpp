@@ -18,6 +18,7 @@ public:
     walked_distance += distance;
   }
 
+  // Constructor
   Person(string cname){
     name = cname;
     walked_distance = 0;
