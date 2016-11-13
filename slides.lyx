@@ -441,7 +441,11 @@ objects
 \end_layout
 
 \begin_layout Itemize
-Instances share attributes and methods
+Enables abstraction and separation of concern
+\end_layout
+
+\begin_layout Itemize
+Instances share properties (attributes and methods)
 \end_layout
 
 \begin_deeper
@@ -454,10 +458,6 @@ Methods define how all objects of a given type (generally) behave
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Enable abstraction and separation of concern
-\end_layout
-
 \begin_layout Pause
 
 \end_layout
@@ -512,12 +512,30 @@ Walk()
 
 \end_layout
 
+\begin_layout Subsection
+Transition from C to C++
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+C 
+\begin_inset Formula $\to$
+\end_inset
+
+ C++
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-C++ Example
+C and C++ Example
 \end_layout
 
 \end_inset
@@ -526,6 +544,10 @@ C++ Example
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+Data structure changes
+\end_layout
+
 \begin_layout Itemize
 In C, you would use structs, cf.
  
@@ -541,7 +563,11 @@ target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/oop1-2.cp
 status open
 
 \begin_layout Plain Layout
-Notice the Walk function requires a pointer to a struct.
+Notice the 
+\family typewriter
+Walk()
+\family default
+ function requires a pointer to a struct.
 \end_layout
 
 \end_inset
@@ -557,7 +583,7 @@ In C++, we'll use an object:
 \begin_layout Itemize
 \begin_inset CommandInset href
 LatexCommand href
-name "OOP example"
+name "OOP example 1"
 target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/oop1-3.cpp#L6"
 
 \end_inset
@@ -578,7 +604,7 @@ Any issues here?
 \begin_layout Itemize
 \begin_inset CommandInset href
 LatexCommand href
-name "OOP example"
+name "OOP example 2"
 target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/oop1-1.cpp#L6"
 
 \end_inset
@@ -588,9 +614,13 @@ target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/oop1-1.cp
 status open
 
 \begin_layout Plain Layout
-How about here?
+Identify attributes, methods, constructor, initialization and scope.
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator plain
 \end_inset
 
 
@@ -598,13 +628,13 @@ How about here?
 
 \end_deeper
 \end_deeper
-\begin_layout Subsection
-Transition from C to C++
-\begin_inset Argument 2
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-C++?
+
+%grrr
 \end_layout
 
 \end_inset
@@ -617,7 +647,7 @@ C++?
 status open
 
 \begin_layout Plain Layout
-Namespaces / Classes / Instances
+Namespaces
 \end_layout
 
 \end_inset
@@ -626,38 +656,24 @@ Namespaces / Classes / Instances
 \end_layout
 
 \begin_deeper
-\begin_layout Example
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-1-
+\begin_layout FrameSubtitle
+using namespace blah;
 \end_layout
+
+\begin_layout Itemize
+Easily avoid naming conflicts
+\end_layout
+
+\begin_layout Itemize
+More info 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "http://en.cppreference.com/w/cpp/language/namespace"
 
 \end_inset
 
-On first slide.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-2-
-\end_layout
-
-\end_inset
-
-On second slide.
+.
 \end_layout
 
 \end_deeper
