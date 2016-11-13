@@ -1,9 +1,7 @@
 #include <iostream>
 
-using namespace std;
-
 int main(){
-  cout << "Namespaces rock;" << endl;
-  cout << "But they quickly become verbose..." << endl;
+  std::cout << "Namespaces rock;" << std::endl;
+  std::cout << "But they quickly become verbose..." << std::endl;
   return 0;
 }
