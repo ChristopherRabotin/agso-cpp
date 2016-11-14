@@ -3,9 +3,8 @@
 
 // C++ calls functions in a different way, so you need to change specify that this is a C/FORTRAN function call
 
-extern "C"{
-// FORTRAN adds _ after all the function names
-// and all variables are called by reference
+extern "C" {
+// FORTRAN adds _ after all the function names and all variables are called by reference
 double ddot_( const int *N, const double *a, const int *inca, const double *b, const int *incb );
 double dnrm2_( const int *N, const double *x, const int *incx);
 }
@@ -19,15 +18,13 @@ double dnorm2(int N, double *a, int incx){
 };
 
 int main(){
-  // you can define the arrays in one of two ways
-  // on the heap
+  // you can define the arrays in one of two ways on the heap
   double *a = new double[3];
   a[0] = 1.0; a[1] = 2.0; a[2] = 3.0;
   // on the stack
   double b[3] = { 4.0, 5.0, 6.0 };
 
-  double dot_product = ddot( 3, a, 1, b, 1 );
-  cout <<" The dot product is: " <<  dot_product << endl;
+  cout <<" The dot product is: " <<  ddot( 3, a, 1, b, 1 ) << endl;
   cout <<" The norm is:" << dnorm2(3, a, 1) << endl;
 
   return 0;

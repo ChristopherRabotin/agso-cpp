@@ -38,7 +38,7 @@
 \use_hyperref true
 \pdf_title "ASGO C++ Intro"
 \pdf_author "Christopher Rabotin"
-\pdf_keywords "cpp"
+\pdf_keywords "cpp stl golang python rust"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -177,8 +177,7 @@ Rabotin
 status open
 
 \begin_layout Plain Layout
-C.
- Rabotin
+Chris Rabotin
 \end_layout
 
 \end_inset
@@ -191,17 +190,50 @@ November 16, 2016
 \end_layout
 
 \begin_layout Institute
-Department of Aerospace Engineering Sciences
+\begin_inset Formula $christopher.rabotin@\begin{cases}
+gmail.com\\
+colorado.edu
+\end{cases}$
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
-University of Colorado Boulder
-\begin_inset Argument 1
+
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/ChristopherRabotin"
+target "https://github.com/ChristopherRabotin"
+
+\end_inset
+
+
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-CU
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/ChristopherRabotin/asgo-cpp/"
+target "https://github.com/ChristopherRabotin/asgo-cpp/"
+
+\end_inset
+
+
 \end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "linkedin.com/in/chrisrabotin"
+target "http://www.linkedin.com/in/chrisrabotin"
 
 \end_inset
 
@@ -229,14 +261,14 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 pgfdeclareimage[height=0.5cm]{institution-logo}{agso}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 logo{
 \backslash
@@ -370,7 +402,7 @@ LatexCommand tableofcontents
 \end_deeper
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Structuring a talk is a difficult task and the following structure may not
@@ -1319,6 +1351,13 @@ target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/inherit1.
 \end_inset
 
  
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
 \begin_inset CommandInset href
 LatexCommand href
 name "inherit2.cpp"
@@ -1607,13 +1646,6 @@ status open
 
 \end_layout
 
-\begin_layout Description
-TODO: Talk about STL and a brief intro of BLAS.
- Also mention helping libs like Qt.
- And finish with opening towards Golang and Rust, specifying that Rust can
- be used low level on ARM proc via Zinc (although still in its infancy).
-\end_layout
-
 \begin_layout Section
 Useful librairies
 \end_layout
@@ -1845,7 +1877,7 @@ Search for
 \family typewriter
 blas-devel
 \family default
- on your machine.
+ in your package manager.
 \end_layout
 
 \end_inset
@@ -1884,11 +1916,27 @@ BLAS is split in three levels:
 
 \begin_deeper
 \begin_layout Enumerate
-Vector operations
+Vector operations 
+\begin_inset CommandInset href
+LatexCommand href
+name "blas1.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/blas1.cpp#L1"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Matrix to vector operations
+Matrix to vector operations 
+\begin_inset CommandInset href
+LatexCommand href
+name "blas2.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/blas2.cpp#L1"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1914,11 +1962,21 @@ target "http://www.netlib.org/lapack/explore-html/d1/df9/group__blas.html"
 
 \end_deeper
 \begin_layout Subsection
-Basic Ideas for Proofs/Implementations
+Qt
 \end_layout
 
-\begin_layout Section*
-Summary
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -1926,7 +1984,7 @@ Summary
 status open
 
 \begin_layout Plain Layout
-Summary
+Qt
 \end_layout
 
 \end_inset
@@ -1935,132 +1993,100 @@ Summary
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-The
-\color none
- 
-\color inherit
-
-\begin_inset Flex Alert
-status open
-
-\begin_layout Plain Layout
-first main message
+\begin_layout FrameSubtitle
+Qt is actually a lot of fun.
 \end_layout
+
+\begin_layout Itemize
+Cross platform
+\end_layout
+
+\begin_layout Itemize
+Templates and various helpers
+\end_layout
+
+\begin_layout Itemize
+Beautiful and easy to build user interfaces
+\end_layout
+
+\begin_layout Itemize
+Works on (some) embedded devices
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Official website"
+target "https://www.qt.io/"
 
 \end_inset
 
 
-\color none
- of your talk in one or two lines.
+\end_layout
+
+\begin_layout Pause
+
 \end_layout
 
 \begin_layout Itemize
-The
-\color none
- 
-\color inherit
-
-\begin_inset Flex Alert
+Full disclosure: I have not used Qt5, only Qt4.
+ Back in 2013, the official documentation had examples that would not compile
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-second main message
-\end_layout
+cf.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "this stack overflow question"
+target "http://stackoverflow.com/questions/17273352/qt-qml-is-it-allowed-to-have-a-model-view-as-a-delegate"
 
 \end_inset
 
 
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-Perhaps a
-\color none
- 
-\color inherit
-
-\begin_inset Flex Alert
-status open
-
-\begin_layout Plain Layout
-third message
 \end_layout
 
 \end_inset
 
-
-\color none
-, but not more than that.
+.
 \end_layout
 
+\end_deeper
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-An outlook is always optional.
+
+%grrr
 \end_layout
 
 \end_inset
 
 
-\begin_inset VSpace defskip
-\end_inset
-
-
 \end_layout
 
-\begin_layout Itemize
-Outlook
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-What we have not done yet.
-\end_layout
-
-\begin_layout Itemize
-Even more stuff.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Section*
-\start_of_appendix
-\begin_inset Note Note
+\begin_layout Section
+Where fun and future meet
+\begin_inset Argument 2
 status open
 
 \begin_layout Plain Layout
-All of the following is optional and typically not needed.
+El futuro!
 \end_layout
 
 \end_inset
 
-Appendix
-\end_layout
 
-\begin_layout Subsection*
-For Further Reading
 \end_layout
 
 \begin_layout Frame
-\begin_inset Argument 3
-status collapsed
-
-\begin_layout Plain Layout
-allowframebreaks
-\end_layout
-
-\end_inset
-
-
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-For Further Reading
+Not a C++ fan?
 \end_layout
 
 \end_inset
@@ -2069,25 +2095,108 @@ For Further Reading
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+You're not alone!
+\end_layout
+
+\begin_layout Itemize
+C++ has many of disadvantages:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+No pointer safety
+\end_layout
+
+\begin_layout Itemize
+Slow to code
+\end_layout
+
+\begin_layout Itemize
+Shared library linking (i.e.
+ not easily portable)
+\end_layout
+
+\begin_layout Itemize
+Cryptic compiling errors
+\end_layout
+
+\begin_layout Itemize
+Debugging is terribly annoying
+\end_layout
+
+\begin_layout Itemize
+Sickening verbosity
+\end_layout
+
+\begin_layout Itemize
+Multicore capabilities are annoying
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+But it's still widely used because of...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Heritage systems
+\end_layout
+
+\begin_layout Itemize
+Optimization possibilities in C and assembly
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+cf.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "this article"
+target "http://www.lurklurk.org/linkers/linkers.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Managers who are tired of playing catch-up with the ever evolving world
+ of software engineering
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-beamertemplatebookbibitems
+%grrr
 \end_layout
 
 \end_inset
 
 
-\begin_inset Note Note
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Start with overview books.
+Python
 \end_layout
 
 \end_inset
@@ -2095,120 +2204,331 @@ Start with overview books.
 
 \end_layout
 
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Author1990"
+\begin_deeper
+\begin_layout FrameSubtitle
+Bringing awesomeness to people since 1991
+\end_layout
 
-\end_inset
+\begin_layout Itemize
+Advantages
+\end_layout
 
-A.
- Author.
+\begin_deeper
+\begin_layout Itemize
+Plenty of libraries (cf.
  
-\begin_inset ERT
+\begin_inset CommandInset href
+LatexCommand href
+name "PyPI"
+target "http://pypi.python.org"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Trivial to learn
+\end_layout
+
+\begin_layout Itemize
+As readable as novel
+\begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Usually."
+target "https://github.com/influxdata/influxdb-python/blob/master/influxdb/helper.py#L17"
 
+\end_inset
 
-\backslash
-newblock
+ (code by Yours truly)
 \end_layout
 
 \end_inset
 
 
-\emph on
-Handbook of Everything
-\emph default
-.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Some Press, 1990.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatearticlebibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Followed by interesting articles.
- Keep the list short.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Someone2002"
-
-\end_inset
-
-S.
- Someone.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- On this and that
-\emph on
-.
-
-\emph default
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Journal on This and That
-\emph default
-.
- 2(1):50–100, 2000.
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Disadvantages
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Interpreted language (i.e.
+ slow to execute and mostly runtime errors)
+\end_layout
+
+\begin_layout Itemize
+Multicore is a drag as well (cf.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "gevent"
+target "http://www.gevent.org/"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Two different on-going releases: Python 2.x and 3.x
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Official website"
+target "https://www.python.org/"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Go (golang)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Fun, and with a huge community
+\end_layout
+
+\begin_layout Itemize
+By Google
+\end_layout
+
+\begin_layout Itemize
+Advantages
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Compiled
+\end_layout
+
+\begin_layout Itemize
+Simple syntax
+\end_layout
+
+\begin_layout Itemize
+Optimized for concurrency
+\end_layout
+
+\begin_layout Itemize
+Garbage collected (no need to free memory)
+\end_layout
+
+\begin_layout Itemize
+No useless characters (bye-bye semi-colons!)
+\end_layout
+
+\begin_layout Itemize
+Cross platform and statically linked
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Disadvantages
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Quite new language, i.e.
+ a lot of boilerplate code
+\end_layout
+
+\begin_layout Itemize
+Garbage collected (the world freezes momentarily)
+\end_layout
+
+\begin_layout Itemize
+Workspace setup is a drag
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Official website"
+target "http://golang.org/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Learn online: 
+\begin_inset CommandInset href
+LatexCommand href
+name "Go By Example"
+target "http://gobyexample.com/"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Rust
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Quite possibly a C++ killer
+\end_layout
+
+\begin_layout Itemize
+Led by Mozilla
+\end_layout
+
+\begin_layout Itemize
+Advantages
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ridiculous speeds
+\end_layout
+
+\begin_layout Itemize
+Outstanding memory management and safety (variables are immutable by default)
+\end_layout
+
+\begin_layout Itemize
+Optimized for concurrency
+\end_layout
+
+\begin_layout Itemize
+Runs on bare ARM processors (i.e.
+ can be used for hard real time applications)
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "via Zinc"
+target "https://zinc.rs/"
+
+\end_inset
+
+ (experimental)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Disadvantages
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Too recent to be stable
+\end_layout
+
+\begin_layout Itemize
+Some functional programming paradigms are confusing
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Official website"
+target "http://rust-lang.org/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Learn online: 
+\begin_inset CommandInset href
+LatexCommand href
+name "Rust By Example"
+target "http://rustbyexample.com/"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
