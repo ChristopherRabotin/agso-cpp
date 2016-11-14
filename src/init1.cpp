@@ -1,8 +1,5 @@
 #include "init1.hpp"
 
-using std::cout;
-using std::endl;
-
 Person* initAliceOnHeap() {
   Person *Alice = new Person("AliceHeap");
   return Alice;

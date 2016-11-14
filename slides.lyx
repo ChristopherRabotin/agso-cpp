@@ -795,7 +795,7 @@ PrettyPrint: prints to the console as
 \begin_inset CommandInset href
 LatexCommand href
 name "Implementation example"
-target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb1.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb1.cpp#L1"
 
 \end_inset
 
@@ -953,6 +953,433 @@ target "http://en.cppreference.com/w/cpp/language/namespace"
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Class instantiation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Don't be like your annoying roommate: clean up your mess.
+\end_layout
+
+\begin_layout Itemize
+Two kinds of memory:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Stack:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Local variables
+\end_layout
+
+\begin_layout Itemize
+Cleared upon return
+\end_layout
+
+\begin_layout Itemize
+May overflow (hence 
+\begin_inset Quotes eld
+\end_inset
+
+stack overflow
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Person Alice("AliceStack");
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Heap
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Everything else
+\end_layout
+
+\begin_layout Itemize
+Much bigger than the stack
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+You
+\emph default
+ are responsible for the mess
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+cf.
+ https://en.wikipedia.org/wiki/Memory_leak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Person *Alice = new Person("AliceHeap");
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Examples:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+What should we expect here: 
+\begin_inset CommandInset href
+LatexCommand href
+name "init1.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/6c5e11d79321c9a6565d792d7df590c9caaa5033/src/init1.cpp#L6"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+How about now? 
+\begin_inset CommandInset href
+LatexCommand href
+name "init1 diff"
+target "https://github.com/ChristopherRabotin/asgo-cpp/commit/6b34b269e2a79c5ff08098b1f5723e1dd41cedec?diff=unified#diff-6ddb0eeb36942cc7ae752df3abdab192L16"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Take home problem 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+I hope you kept your code from problem 1
+\end_layout
+
+\begin_layout Itemize
+Split up your previous class in a header file and an implementation file
+\end_layout
+
+\begin_layout Itemize
+Create two vectors, one must be defined on the heap and the other on the
+ stack
+\end_layout
+
+\begin_layout Itemize
+Initialize one of them in a function, and the other in the 
+\family typewriter
+main
+\end_layout
+
+\begin_layout Itemize
+Print out whether they are equal or not in the 
+\family typewriter
+main
+\end_layout
+
+\begin_layout Itemize
+Implementation examples:
+\begin_inset CommandInset href
+LatexCommand href
+name "pb2.hpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb2.hpp#L1"
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "pb2.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb2.cpp#L1"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Advanced OOP
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Adv.
+ OOP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Class inheritance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mommy?
+\end_layout
+
+\begin_layout Itemize
+Object attributes are a 
+\emph on
+has-a
+\series bold
+\emph default
+ 
+\series default
+relationship
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+e.g.
+ a 
+\family typewriter
+Person
+\family default
+ has-a 
+\family typewriter
+name
+\family default
+ and 
+\family typewriter
+walking_distance
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Class inheritance:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Define a 
+\emph on
+is-a
+\emph default
+ relation.
+\end_layout
+
+\begin_layout Itemize
+Somewhat 
+\begin_inset Quotes eld
+\end_inset
+
+classes of objects
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Share common attributes and methods between objects
+\end_layout
+
+\begin_layout Itemize
+Each object instance shares their class' properties and the parent's properties
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Examples:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+a 
+\family typewriter
+Person
+\family default
+ 
+\emph on
+is-a
+\emph default
+ great ape
+\end_layout
+
+\begin_layout Itemize
+a 
+\family typewriter
+Gorilla
+\family default
+ 
+\emph on
+is-a
+\emph default
+ great ape
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Create two vectors, one must be defined on the heap and the other on the
+ stack
+\end_layout
+
+\begin_layout Itemize
+Initialize one of them in a function, and the other in the 
+\family typewriter
+main
+\end_layout
+
+\begin_layout Itemize
+Print out whether they are equal or not in the 
+\family typewriter
+main
+\end_layout
+
+\begin_layout Itemize
+Implementation examples:
+\begin_inset CommandInset href
+LatexCommand href
+name "pb2.hpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb2.hpp#L1"
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "pb2.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb2.cpp#L1"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 TODO: Talk about STL and a brief intro of BLAS.
  Also mention helping libs like Qt.
@@ -961,11 +1388,21 @@ TODO: Talk about STL and a brief intro of BLAS.
 \end_layout
 
 \begin_layout Section
-Our Results/Contribution
+Useful librairies
 \end_layout
 
 \begin_layout Subsection
-Main Results
+The Standard Template Library
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+STL
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
