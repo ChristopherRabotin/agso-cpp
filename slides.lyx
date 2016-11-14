@@ -482,7 +482,7 @@ Object Oriented Programming?
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Recommanded reading: https://en.wikipedia.org/wiki/Object-oriented_programming
+Re commanded reading: https://en.wikipedia.org/wiki/Object-oriented_programming
 \end_layout
 
 \begin_layout Itemize
@@ -941,7 +941,7 @@ A class defines a new namespace
 
 \begin_layout Itemize
 Allows for forward declaration, i.e.
- defering function implementation
+ deferring function implementation
 \end_layout
 
 \begin_deeper
@@ -1647,7 +1647,7 @@ status open
 \end_layout
 
 \begin_layout Section
-Useful librairies
+Useful libraries
 \end_layout
 
 \begin_layout Subsection
@@ -1858,7 +1858,7 @@ BLAS is a very high performance linear algebra library
 status collapsed
 
 \begin_layout Plain Layout
-AFAIK, a large chunk is written in assembly, another in C and Fortran.
+AFAIK, a large chunk is written in assembly, another in C and FORTRAN.
 \end_layout
 
 \end_inset
@@ -1907,7 +1907,7 @@ g++ blas1.cpp -lblas
 \end_layout
 
 \begin_layout Itemize
-Documentation seems spares at best, tutorials barely existant
+Documentation seems spares at best, tutorials barely existent
 \end_layout
 
 \begin_layout Itemize
