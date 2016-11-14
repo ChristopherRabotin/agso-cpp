@@ -703,12 +703,8 @@ Or
 \family typewriter
 protected
 \family default
-, or 
-\family typewriter
-virtual
-\family default
 .
- More on these later.
+ More on that later.
 \end_layout
 
 \end_inset
@@ -1153,7 +1149,7 @@ main
 \end_layout
 
 \begin_layout Itemize
-Implementation examples:
+Implementation examples: 
 \begin_inset CommandInset href
 LatexCommand href
 name "pb2.hpp"
@@ -1195,20 +1191,6 @@ status open
 \begin_layout Plain Layout
 Adv.
  OOP
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%grrr
 \end_layout
 
 \end_inset
@@ -1329,36 +1311,257 @@ is-a
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-Create two vectors, one must be defined on the heap and the other on the
- stack
-\end_layout
-
-\begin_layout Itemize
-Initialize one of them in a function, and the other in the 
-\family typewriter
-main
-\end_layout
-
-\begin_layout Itemize
-Print out whether they are equal or not in the 
-\family typewriter
-main
-\end_layout
-
-\begin_layout Itemize
-Implementation examples:
 \begin_inset CommandInset href
 LatexCommand href
-name "pb2.hpp"
-target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb2.hpp#L1"
+name "inherit1.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/inherit1.cpp#L8"
 
 \end_inset
 
  
 \begin_inset CommandInset href
 LatexCommand href
-name "pb2.cpp"
-target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb2.cpp#L1"
+name "inherit2.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/inherit2.cpp#L11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Things to remember:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Constructors and destructors must be redefined
+\end_layout
+
+\begin_layout Itemize
+The 
+\family typewriter
+virtual
+\family default
+ keyword allows a function to be redefined
+\end_layout
+
+\begin_layout Itemize
+The 
+\family typewriter
+protected
+\family default
+ keyword allows a property to be used solely by the subclasses
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Operator overloading
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Remember how you can define operators in algebraic structures in abstract
+ algebra? Same, same, only really useful.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+No offense to 
+\begin_inset CommandInset href
+LatexCommand href
+name "ring"
+target "https://en.wikipedia.org/wiki/Ring_(mathematics)"
+
+\end_inset
+
+ lovers out there.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Enables one to use the basic C++ operators for any object
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
++ - * / >> <<
+\family default
+ etc.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Example: 
+\begin_inset CommandInset href
+LatexCommand href
+name "advoop.hpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/advoop.hpp#L1"
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "advoop.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/advoop.cpp#L1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+More information: 
+\begin_inset CommandInset href
+LatexCommand href
+name "StackOverflow"
+target "http://stackoverflow.com/questions/4421706/operator-overloading"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "Wikibooks"
+target "https://en.wikibooks.org/wiki/C%2B%2B_Programming/Operators/Operator_Overloading"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Templating
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+\begin_inset Quotes eld
+\end_inset
+
+Started from the bottom now we're here
+\begin_inset Quotes erd
+\end_inset
+
+ - Drake.
+\end_layout
+
+\begin_layout Quote
+\noindent
+\align center
+
+\series bold
+This is a complicated topic.
+ Don't expect to understand this immediately.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Defines genericity between objects
+\end_layout
+
+\begin_layout Itemize
+Extract common behavior of unrelated objects
+\end_layout
+
+\begin_layout Itemize
+Very powerful design pattern when mastered
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Examples:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Apply a given operation to many different classes
+\end_layout
+
+\begin_layout Itemize
+Re-arranging items of an array in a specific way
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+More info on Wikiversity 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://en.wikiversity.org/wiki/C%2B%2B/Templates_1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://en.wikiversity.org/wiki/C%2B%2B/Templates_2"
 
 \end_inset
 
