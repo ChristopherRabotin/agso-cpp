@@ -5,6 +5,9 @@
 #include <string>
 
 using std::string;
+using std::cout;
+using std::endl;
+
 
 class Person{
 private:
@@ -15,6 +18,7 @@ public:
   unsigned int GetWalkedDistance();
   void Walk(unsigned int distance);
   Person(string cname);
+  ~Person();
 };
 
 // - "Ewwww, why use forward declaration if you're gonna define it here?"
@@ -35,6 +39,12 @@ void Person::Walk(unsigned int distance){
 Person::Person(string cname){
   name = cname;
   walked_distance = 0;
+}
+
+// The "destructor" has a tilde in front of it.
+// Use to clean up whatever you need (e.g. flush an IO, close a database, etc.)
+Person::~Person(){
+  cout << "\"Sarah Connor?\" - The Terminator." << endl;
 }
 
 #endif

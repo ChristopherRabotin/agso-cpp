@@ -8,17 +8,9 @@ Person* initAliceOnHeap() {
   return Alice;
 }
 
-Person* initAliceOnStack(){
-  Person Alice("AliceStack");
-  return &Alice;
-}
-
 int main(){
   Person* AH = initAliceOnHeap();
   cout << "AH is called " << AH->GetName() << "." << endl;
-
-  Person* AS = initAliceOnStack();
-  cout << "AS is called " << AS->GetName() << "." << endl;
-
+  delete AH; // Avoids memory leaks.
   return 0;
 }
