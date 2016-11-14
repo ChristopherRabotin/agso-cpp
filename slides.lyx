@@ -35,7 +35,19 @@
 \index_command default
 \paperfontsize 10
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_title "ASGO C++ Intro"
+\pdf_author "Christopher Rabotin"
+\pdf_keywords "cpp"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 2
@@ -342,6 +354,10 @@ Outline
 \end_layout
 
 \begin_deeper
+\begin_layout Quote
+Programming is about practice, practice and more practice.
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
@@ -351,6 +367,7 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status open
@@ -400,7 +417,6 @@ If you omit details that are vital to the proof/implementation, just say
 
 \end_layout
 
-\end_deeper
 \begin_layout Section
 Concepts
 \end_layout
@@ -433,6 +449,10 @@ Object Oriented Programming?
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+Recommanded reading: https://en.wikipedia.org/wiki/Object-oriented_programming
+\end_layout
+
 \begin_layout Itemize
 Very common paradigm of programming which uses special data structures called
  
@@ -535,7 +555,7 @@ C
 status open
 
 \begin_layout Plain Layout
-C and C++ Example
+In practice, what's an object?
 \end_layout
 
 \end_inset
@@ -545,11 +565,40 @@ C and C++ Example
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Data structure changes
+\begin_inset Quotes eld
+\end_inset
+
+Well...
+ THAT escalated quickly.
+\begin_inset Quotes erd
+\end_inset
+
+ - Ron Burgundy
+\end_layout
+
+\begin_layout Standard
+We'll define a 
+\family typewriter
+Person
+\family default
+ object which can 
+\family typewriter
+Walk()
+\family default
+ a provided distance.
 \end_layout
 
 \begin_layout Itemize
-In C, you would use structs, cf.
+In C,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use structs to bundle attributes
+\end_layout
+
+\begin_layout Itemize
+But methods are independently defined, cf.
  
 \begin_inset CommandInset href
 LatexCommand href
@@ -560,7 +609,7 @@ target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/oop1-2.cp
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Notice the 
@@ -575,6 +624,7 @@ Walk()
 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 In C++, we'll use an object:
 \end_layout
@@ -620,13 +670,148 @@ Identify attributes, methods, constructor, initialization and scope.
 \end_inset
 
 
-\begin_inset Separator plain
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Constructor allows to set the attributes of an object, including 
+\emph on
+default
+\emph default
+ values
+\end_layout
+
+\begin_layout Itemize
+Properties defined either as 
+\family typewriter
+private
+\family default
+ or 
+\family typewriter
+public
+\family default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Or 
+\family typewriter
+protected
+\family default
+, or 
+\family typewriter
+virtual
+\family default
+.
+ More on these later.
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Take home problem 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+What did I say about practice?
+\end_layout
+
+\begin_layout Itemize
+Create a 3D vector object
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Don't use 
+\family typewriter
+std::vector
+\family default
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Attributes: 
+\family typewriter
+x, y, z
+\family default
+ as double
+\end_layout
+
+\begin_layout Itemize
+Methods:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Equals: returns whether two vectors are equal
+\end_layout
+
+\begin_layout Itemize
+PrettyPrint: prints to the console as 
+\family typewriter
+[1, -5, 6.1] 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Implementation example"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb1.cpp"
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Try it yourself before the link.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset ERT
@@ -657,7 +842,11 @@ Namespaces
 
 \begin_deeper
 \begin_layout FrameSubtitle
-using namespace blah;
+Thank you Mario! But our princess is in another castle!
+\end_layout
+
+\begin_layout Itemize
+Add some organization to your code
 \end_layout
 
 \begin_layout Itemize
@@ -665,6 +854,72 @@ Easily avoid naming conflicts
 \end_layout
 
 \begin_layout Itemize
+Enables header class definitions
+\end_layout
+
+\begin_layout Itemize
+Compare for yourself: 
+\begin_inset CommandInset href
+LatexCommand href
+name "ns2.cpp diff 1"
+target "https://github.com/ChristopherRabotin/asgo-cpp/commit/7ba0afbdf55a966fa1d6fd2527ab722eff62baf4?diff=split"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Avoid: 
+\family typewriter
+using namespace blah;
+\family default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Unless you can guarantee no conflict at all.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Instead, specify the function(s) to extract: 
+\begin_inset CommandInset href
+LatexCommand href
+name "ns2.cpp diff 2"
+target "https://github.com/ChristopherRabotin/asgo-cpp/commit/b9ceedee63fd048ab82d5ca632b377707d16bac5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Allows defering function implementation: 
+\begin_inset CommandInset href
+LatexCommand href
+name "ns2.cpp diff 2"
+target "https://github.com/ChristopherRabotin/asgo-cpp/commit/b9ceedee63fd048ab82d5ca632b377707d16bac5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 More info 
 \begin_inset CommandInset href
 LatexCommand href
