@@ -1,32 +1,25 @@
-#include <iostream>
-#include <string>
+#include "ns3.hpp"
 
-using std::string;
 using std::cout;
 using std::endl;
 
-class Person{
-private:
-  string name;
-  unsigned int walked_distance;
-public:
-  string GetName(){
-    return name;
-  }
+string Person::GetName(){
+  return name;
+}
 
-  unsigned int GetWalkedDistance(){
-    return walked_distance;
-  }
+unsigned int Person::GetWalkedDistance(){
+  return walked_distance;
+}
 
-  void Walk(unsigned int distance){
-    walked_distance += distance;
-  }
+void Person::Walk(unsigned int distance){
+  walked_distance += distance;
+}
 
-  Person(string cname){
-    name = cname;
-    walked_distance = 0;
-  }
-};
+Person::Person(string cname){
+  name = cname;
+  walked_distance = 0;
+}
+
 
 int main(){
   Person Alice("Alice");
