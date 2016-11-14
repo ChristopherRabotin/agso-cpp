@@ -1540,9 +1540,33 @@ Examples:
 
 \begin_deeper
 \begin_layout Itemize
-Apply a given operation to many different classes
+Apply a given operation to many different classes:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Example 1"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/c1b01483fa81aa9e886c7d7441c697f450107011/src/templt.cpp#L1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Example 2"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/templt.cpp#L1"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Re-arranging items of an array in a specific way
 \end_layout
@@ -1613,8 +1637,7 @@ STL
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
- 
+The Standard Template Library
 \end_layout
 
 \end_inset
@@ -1623,21 +1646,86 @@ Make Titles Informative.
 \end_layout
 
 \begin_deeper
-\begin_layout Theorem
-On first slide.
+\begin_layout FrameSubtitle
+STL is awesome and you should use it.
 \end_layout
 
-\begin_layout Pause
+\begin_layout Itemize
+Collection of templated data structures
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+My torture of you guys was justified, 
+\begin_inset CommandInset href
+LatexCommand href
+name "right?"
+target "http://plato.stanford.edu/entries/torture/"
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Corollary
-On second slide.
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In aerospace, you'll probably mostly use 
+\family typewriter
+std::vector
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "stl.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/stl.cpp#L1"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Several versions exist, and some are no longer maintained, so check which
+ one you have
+\end_layout
+
+\begin_layout Itemize
+More information: 
+\begin_inset CommandInset href
+LatexCommand href
+name "Wikiversity"
+target "https://en.wikiversity.org/wiki/C%2B%2B/STL#vector"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "this STL tutorial"
+target "https://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Separator plain
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
 \end_inset
 
 
@@ -1648,8 +1736,7 @@ On second slide.
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
- 
+Take home problem 3
 \end_layout
 
 \end_inset
@@ -1658,50 +1745,173 @@ Make Titles Informative.
 \end_layout
 
 \begin_deeper
-\begin_layout ColumnsTopAligned
-
+\begin_layout FrameSubtitle
+Let the fun begin!
 \end_layout
 
-\begin_deeper
-\begin_layout Column
-5cm
+\begin_layout Itemize
+Use STL's vector to create a 3D vector of double
 \end_layout
 
-\begin_layout Theorem
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-1-
+\begin_layout Itemize
+Overload the == operator to return whether two vectors are identical
 \end_layout
+
+\begin_layout Itemize
+Implementation example: 
+\begin_inset CommandInset href
+LatexCommand href
+name "pb3.cpp"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/master/src/exercise/pb3.cpp#L1"
 
 \end_inset
 
-In left column.
-\end_layout
 
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Corollary
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-2-
-\end_layout
-
-\end_inset
-
-In right column.
-\begin_inset Newline newline
-\end_inset
-
-New line
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%grrr
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The Basic Linear Algebra Subprograms
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+BLAS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+BLAS intro of intro
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+A real drag to use, but well worth it
+\end_layout
+
+\begin_layout Itemize
+BLAS is a very high performance linear algebra library
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+AFAIK, a large chunk is written in assembly, another in C and Fortran.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Isn't distributed by default, i.e.
+ needs installation
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Search for 
+\family typewriter
+blas-devel
+\family default
+ on your machine.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Requires the 
+\family typewriter
+-lblas
+\family default
+ flag when compiling
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+e.g.
+ 
+\family typewriter
+g++ blas1.cpp -lblas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Documentation seems spares at best, tutorials barely existant
+\end_layout
+
+\begin_layout Itemize
+BLAS is split in three levels:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Vector operations
+\end_layout
+
+\begin_layout Enumerate
+Matrix to vector operations
+\end_layout
+
+\begin_layout Enumerate
+Matrix to matrix operations
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+BLAS does not solve linear algebra problems.
+ For this, use LAPACK.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Official documentation"
+target "http://www.netlib.org/lapack/explore-html/d1/df9/group__blas.html"
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Subsection
 Basic Ideas for Proofs/Implementations
