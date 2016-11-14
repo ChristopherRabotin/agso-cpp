@@ -854,7 +854,7 @@ Easily avoid naming conflicts
 \end_layout
 
 \begin_layout Itemize
-Enables header class definitions
+Enable header class definitions
 \end_layout
 
 \begin_layout Itemize
@@ -908,17 +908,38 @@ target "https://github.com/ChristopherRabotin/asgo-cpp/commit/b9ceedee63fd048ab8
 \end_layout
 
 \begin_layout Itemize
-Allows defering function implementation: 
+A class defines a new namespace
+\end_layout
+
+\begin_layout Itemize
+Allows for forward declaration, i.e.
+ defering function implementation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset CommandInset href
 LatexCommand href
-name "ns2.cpp diff 2"
-target "https://github.com/ChristopherRabotin/asgo-cpp/commit/b9ceedee63fd048ab82d5ca632b377707d16bac5"
+name "New ns3.hpp header file"
+target "https://github.com/ChristopherRabotin/asgo-cpp/blob/b51cb915cd9c2d1a8409a6c408e6562fa187ab0f/src/ns3.hpp#L1"
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "ns3.cpp diff"
+target "https://github.com/ChristopherRabotin/asgo-cpp/commit/b51cb915cd9c2d1a8409a6c408e6562fa187ab0f?diff=split#diff-a1affcebd9965c7fd56af8e827fb2c23R6"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 More info 
 \begin_inset CommandInset href
