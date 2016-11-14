@@ -15,8 +15,7 @@ int main(){
   double ci = 10, cj = 2;
   std::cout << addition(ci, cj) << std::endl;
 
-  Vector2D v1(1, 4);
-  Vector2D v2(2, 3);
+  Vector2D v1(1, 4), v2(2, 3);
   Vector2D v3 = addition(v1, v2);
   std::cout << "[" << v3.x << ", " << v3.y << "]"<< std::endl;
 
